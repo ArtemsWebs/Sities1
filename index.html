@@ -7,6 +7,7 @@
     <script  src="src/JS/index.js" ></script>
     <script src="src/JS/timerLogic.js"></script>
     <script src="src/JS/taimer.js"></script>
+    <script src="src/JS/urlCheck.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="src/css/all-title.css">
@@ -15,48 +16,54 @@
     <title>Title</title>
 </head>
 <body>
-    <div class="title">
-        <div class="high-title">
-            <div class="left-items-container">
-                <img src="src/img/icon/arrow.png"/>
-                <span>User page</span>
-            </div>
-            <div class="right-items-container">
-                <img src="src/img/icon/man.png">
-                <img src="src/img/icon/arrow.png"/>
-            </div>
+<div class="title">
+    <div class="high-title">
+        <div class="left-items-container">
+            <img src="src/img/icon/arrow.png"/>
+            <span>User page</span>
         </div>
-        <div class="low-title">
-            <div class="low-title-right-items-container">
-                <div class="low-title-right-items-container-activity-container" onclick=load_index()>
-                     <img src="src/img/icon/activity.png" class="one">
-                     <span class="profile">Activity</span>
+        <div class="right-items-container">
+            <img src="src/img/icon/man.png">
+            <img src="src/img/icon/arrow.png"/>
+        </div>
+    </div>
+    <div class="low-title">
+        <div class="low-title-right-items-container">
+            <a href="#" class="low-title-right-items-container-activity-container" onmousedown=load_index() onclick=load_index()>
+                <div>
+                    <img src="src/img/icon/activity.png" class="one">
+                    <span class="profile">Activity</span>
                 </div>
-                <div class="low-title-right-items-container-map-container" onclick=load_location()>
+            </a>
+            <a href="#" class="low-title-right-items-container-map-container" onmousedown=load_location() onclick=load_location()>
+                <div>
                     <img src="src/img/icon/map.png">
                     <span class="map">Map</span>
                 </div>
-                <div onclick=load_time() class="low-title-right-items-container-time-container">
+            </a>
+            <a href="#" onclick=load_time() onmousedown=load_time() class="low-title-right-items-container-time-container" >
+                <div>
                     <img src="src/img/icon/setting.png">
                     <span class="time">Time</span>
                 </div>
+            </a>
+        </div>
+        <div class="low-title-left-items-container">
+            <div>
+                <img src="src/img/icon/document.png" class="one">
+                <span>Notes</span>
             </div>
-            <div class="low-title-left-items-container">
-                <div>
-                    <img src="src/img/icon/document.png" class="one">
-                    <span>Notes</span>
-                </div>
-                <div>
-                    <img src="src/img/icon/man.png">
-                    <span>Friends</span>
-                </div>
-                <div>
-                    <img src="src/img/icon/man.png">
-                    <span>Photos</span>
-                </div>
+            <div>
+                <img src="src/img/icon/man.png">
+                <span>Friends</span>
+            </div>
+            <div>
+                <img src="src/img/icon/man.png">
+                <span>Photos</span>
             </div>
         </div>
     </div>
+</div>
     <div class="main-content">
         <div class="main-content-left-container">
             <div class="post">
