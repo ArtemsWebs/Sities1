@@ -4,4 +4,8 @@ function session_time(){
     if(document.querySelector(".timer-time span")!=undefined)
         document.querySelector(".timer-time span").textContent=`${Math.trunc(time / 3600) } : ${Math.trunc((time/60)%60)} : ${Math.trunc(time%60)} `
 }
+function get_new_time(){
+    let time=(Date.now()-session_start_time)/1000
+    document.querySelector(".timer-time span").textContent=`${Math.trunc(time / 3600) } : ${Math.trunc((time/60)%60)} : ${Math.trunc(time%60)}`
+}
 setInterval(session_time,1000)
