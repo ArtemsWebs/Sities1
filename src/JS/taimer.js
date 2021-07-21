@@ -13,6 +13,7 @@ function load_time(new_state=true){
             let link=document.querySelector("#index")
             link.setAttribute("href","src/css/timer-style.css")
             get_new_active_time_class()
+            get_new_time()
             if (new_state)
                 window.history.pushState({page: "taimer"},"taimer", "?page=taimer"+first_taimer)
             first_taimer++
