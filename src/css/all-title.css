@@ -7,6 +7,10 @@ body{
     margin: 0px;
 
 }
+a{
+    text-decoration: none;
+    border-radius: 20px;
+}
 .low-title div{
     display: flex;
     align-items: center;
