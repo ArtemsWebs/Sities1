@@ -1,5 +1,4 @@
 window.addEventListener('popstate', function(e){
-    console.log(e.state.page)
     if(e.state.page==="location" && e.state.page!=undefined){
         load_location(false)
     }
