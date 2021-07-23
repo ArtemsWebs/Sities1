@@ -13,7 +13,7 @@ function load_index(new_state=true){
             document.querySelector(".main-content").remove()
             document.body.appendChild(new_main.querySelector(".main-content"))
             get_new_active_index_class()
-            if (new_state)
+            if (new_state && !window.location.href.includes("page=index"))
                 window.history.pushState({page: "index"},"index", "?page=index")
         })
         .catch(function (error) {
