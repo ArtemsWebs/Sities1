@@ -6,11 +6,12 @@ async function load_location(new_state=true){
     link.setAttribute("href","src/css/map-style.css")
     let new_main= document.createElement("div")
     new_main.innerHTML=info
+    console.log(document.querySelector(".main-content"))
     document.querySelector(".main-content").remove()
     document.body.appendChild(new_main.querySelector(".main-content"))
     load_map_script()
     get_new_active_location_class()
-    if (new_state)
+    if (new_state && !window.location.href.includes("page=location"))
         window.history.pushState({page: "location"},"location", "?page=location")
 
 }

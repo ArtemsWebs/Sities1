@@ -13,7 +13,7 @@ function load_time(new_state=true){
             link.setAttribute("href","src/css/timer-style.css")
             get_new_active_time_class()
             session_time()
-            if (new_state)
+            if (new_state && !window.location.href.includes("page=timer"))
                 window.history.pushState({page: "timer"},"timer", "?page=timer")
 
         })
