@@ -1,8 +1,7 @@
 
 function load_time(new_state=true){
     let info=null;
-    console.log("таймер")
-    axios.get('https://tttdd.github.io/Sities1/src/taimer.html')
+    axios.get('https://tttdd.github.io/Sities1/src/timer.html')
         .then((response)=> {
             // handle success
             info= response.data
@@ -15,7 +14,7 @@ function load_time(new_state=true){
             get_new_active_time_class()
             session_time()
             if (new_state)
-                window.history.pushState({page: "taimer"},"taimer", "?page=timer")
+                window.history.pushState({page: "timer"},"timer", "?page=timer")
 
         })
         .catch(function (error) {
