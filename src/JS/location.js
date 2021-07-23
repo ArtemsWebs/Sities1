@@ -1,4 +1,3 @@
-let first_location=0
 async function load_location(new_state=true){
     let info=null;
     let response=await axios.get('https://tttdd.github.io/Sities1/src/location.html').catch((e)=>{console.log(e)})
@@ -12,8 +11,8 @@ async function load_location(new_state=true){
     load_map_script()
     get_new_active_location_class()
     if (new_state)
-        window.history.pushState({page: "location"},"location", "?page=location"+first_location)
-    first_location++
+        window.history.pushState({page: "location"},"location", "?page=location")
+
 }
 
 function get_new_active_location_class(){

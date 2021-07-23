@@ -1,4 +1,4 @@
-let first_taimer=0
+
 function load_time(new_state=true){
     let info=null;
     console.log("таймер")
@@ -15,8 +15,8 @@ function load_time(new_state=true){
             get_new_active_time_class()
             session_time()
             if (new_state)
-                window.history.pushState({page: "taimer"},"taimer", "?page=taimer"+first_taimer)
-            first_taimer++
+                window.history.pushState({page: "taimer"},"taimer", "?page=taimer")
+
         })
         .catch(function (error) {
             // handle error
