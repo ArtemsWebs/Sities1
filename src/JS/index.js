@@ -1,4 +1,4 @@
-let first_load=0
+
 function load_index(new_state=true){
     let info=null;
     console.log("индекс")
@@ -14,8 +14,7 @@ function load_index(new_state=true){
             document.body.appendChild(new_main.querySelector(".main-content"))
             get_new_active_index_class()
             if (new_state)
-                window.history.pushState({page: "index"},"index", "?page=index"+first_load)
-            first_load++
+                window.history.pushState({page: "index"},"index", "?page=index")
         })
         .catch(function (error) {
             // handle error
