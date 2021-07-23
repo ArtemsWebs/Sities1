@@ -15,7 +15,7 @@ function load_time(new_state=true){
             get_new_active_time_class()
             session_time()
             if (new_state)
-                window.history.pushState({page: "taimer"},"taimer", "?page=taimer")
+                window.history.pushState({page: "taimer"},"taimer", "?page=timer")
 
         })
         .catch(function (error) {
